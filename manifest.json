@@ -1,0 +1,17 @@
+{
+  "name": "LanSchool",
+  "description": "LanSchool helps educators maximize the time spent in class",
+  "version": "4.0",
+  "manifest_version": 3,
+  "permissions": ["tabs"],
+  "content_scripts": [
+      {
+        "matches": ["https://docs.google.com/forms*"],
+        "js": ["build/classroom.js"],
+        "run_at": "document_start"
+      }
+  ],
+  "icons": {
+      "128": "icon.png"
+  }
+}
